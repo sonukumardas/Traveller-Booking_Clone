@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Booking sucess page</title>
+</head>
+<style>
+
+.background {
+	background-color: green;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}		
+	
+</style>
+<body >
+
+
+	<header>
+		<h1 style="text-align:center ;color:red;">Welcomoe to REDBUS </h1>
+
+		<p style="text-align:center" >
+			
+			<a href="/home"> home </a> | 
+			<a href="/travellersignup"> travellersignup </a> | 
+			<a href="/travellerlogin"> travellerlogin </a>
+			
+		</p>
+	</header>
+	
+	<div class="background">
+	<hr>
+	
+	<h2>Hey Traveller, your booking is success with bus number <span style="color:red;"> <span th:text="${travellerkey.busNumber}"></span></span> and password is <span style="color:red;"> <span th:text="${travellerkey.password}"></span></span>.</h2>
+
+	<h2>Booking details are:</h2>
+	
+
+	<h3 style="text-align:center">arrivalLocation : <span th:text="${travellerkey.arrivalLocation}"></span></h3>
+	<h3	style="text-align:center">arrivalTime : <span th:text="${travellerkey.arrivalTime}"></span></h3>
+	<h3 style="text-align:center">amenities : <span th:text="${travellerkey.amenities}"></span></h3>
+	<h3 style="text-align:center">busType : <span th:text="${travellerkey.busType}"></span></h3>
+	<h3 style="text-align:center">boardingPoint : <span th:text="${travellerkey.boardingPoint}"></span></h3>
+    <h3 style="text-align:center">departureLocation : <span th:text="${travellerkey.departureLocation}"></span></h3>
+    <h3 style="text-align:center">departureTime : <span th:text="${travellerkey.departureTime}"></span></h3>
+    <h3 style="text-align:center">duration : <span th:text="${travellerkey.duration}"></span></h3>
+    <h3 style="text-align:center">droppingPoint : <span th:text="${travellerkey.droppingPoint}"></span></h3>
+    <h3 style="text-align:center">fare : <span th:text="${travellerkey.fare}" /-></span></h3>
+    
+    <p style="text-align:center" >
+ <a  href="/travellerlogin"><button > Login Page</button> </a> 
+ </p>
+	<hr>
+
+    </div>
+	<footer>
+		<h3 style="text-align:center">copyright@redbus</h3>
+	</footer>
+</body>
+</html>

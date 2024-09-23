@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>RedBus</title>
+
+</head>
+
+<body>
+	<header>
+			<h1 style=text-align:center;>Welcome to REDBUS</h1>
+			<p style=text-align:center;>
+			<a href="/home"> home </a> | 
+			<a href="/travellersignup">travellersignup </a> | 
+			<a href="/travellerlogin"> travellerlogin </a>| 
+			<a href="/showtraveller">Show Travellers</a>
+			</p>
+		</header>
+			<hr>
+			<table align='center' border='2px' cellpadding='5px' cellspacing='5px'>
+			<tr>
+			<th>Bus_id</th>
+			<th>Destination</th>
+			<th>arrivalTime</th>
+			<th>availableSeats</th>
+			<th>amenities</th>
+			<th>Bus_number</th>
+			<th>password</th>
+			<th>busOperator</th>
+			<th>busType</th>
+			<th>boardingPoint</th>
+			<th>departureLocation</th>
+			<th>departureTime</th>
+			<th>duration</th>
+			<th>droppingPoint</th>
+			<th>fare</th>
+			<th>totalSeats</th>
+			<th>createdDate</th>
+			<th>modifiedDate</th>
+			<th>version</th>
+			</tr>
+			
+			<tr th:each="traveller : ${travellers}">
+			<td th:text="${traveller.id}"></td>
+			<td th:text="${traveller.arrivalLocation}"></td>
+			<td th:text="${traveller.arrivalTime}"></td>
+			<td th:text="${traveller.availableSeats}"></td>
+			<td th:text="${traveller.amenities}"></td>
+			<td th:text="${traveller.busNumber}"></td>
+			<td th:text="${traveller.password}"></td>
+			<td th:text="${traveller.busOperator}"></td>
+			<td th:text="${traveller.busType}"></td>
+			<td th:text="${traveller.boardingPoint}"></td>
+			<td th:text="${traveller.departureLocation}"></td>
+			<td th:text="${traveller.departureTime}"></td>
+			<td th:text="${traveller.duration}"></td>
+			<td th:text="${traveller.droppingPoint}"></td>
+			<td th:text="${traveller.fare}"></td>
+			<td th:text="${traveller.totalSeats}"></td>
+			<td th:text="${traveller.createdDate}"></td>
+			<td th:text="${traveller.modifiedDate}"></td>
+			<td th:text="${traveller.version}"></td>	
+			</tr>
+			
+			</table>
+			
+
+	<br><br><br>
+			<hr>
+			<footer>
+				<h3 style=text-align:center;>copyright@redbus</h3>
+			</footer>
+		</body>
+
+	</html>
